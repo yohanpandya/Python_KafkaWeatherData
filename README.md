@@ -57,6 +57,7 @@ MORE DETAILED EXPLANATION OF CONSUMER:
 
 
 The consumer uses a large dictionary to minimize file I/O. The dictionary is ordered as follows:
+
   Top level keys are partition numbers (integers)
   Each partition contains keys for months (strings)
   Each month contains keys for years (integers)
@@ -66,6 +67,7 @@ So it is nested:
   partition_data[partition_num][month_name][year][metrics]
 
 The consumer processes each message as follows:
+
   Extracting the partition number and message value
   Parsing the message value into a Report protobuf
   Extracting the date, temperature and other fields from the Report
