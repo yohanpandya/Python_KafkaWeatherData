@@ -54,6 +54,8 @@ Here is a step by step way to run the project.
 
 
 MORE DETAILED EXPLANATION OF CONSUMER:
+
+
 The consumer uses a large dictionary to minimize file I/O. The dictionary is ordered as follows:
   Top level keys are partition numbers (integers)
   Each partition contains keys for months (strings)
