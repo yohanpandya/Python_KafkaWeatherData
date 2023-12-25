@@ -40,22 +40,15 @@ To end the consumer, press Ctrl-C.
 
 Here is a step by step way to run the project.
 
-# To build the image
+
 1) docker build . -t p7
 
-# To run the kafka broker
 2) docker run -d -v ./files:/files --name=p7 p7
 
-# To run the producer program
 3) docker exec -it p7 python3 /files/producer.py
 
-# To run the debug program
-4) docker exec -it p7 python3 /files/debug.py
-
-# To run the consumer program (for partition 0, 2)
 5) docker exec -it p7 python3 /files/consumer.py 0 2
 
-# To generate files/month.svg
 6) docker exec -it p7 python3 /files/plot.py
 
 
